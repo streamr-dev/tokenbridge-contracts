@@ -93,7 +93,6 @@ contract BasicAMBErc677ToErc677 is
         relayTokens(_receiver, _value);
     }
 
-
     function onTokenTransfer(address _from, uint256 _value, bytes _data) external returns (bool) {
         ERC677 token = erc677token();
         require(msg.sender == address(token));
